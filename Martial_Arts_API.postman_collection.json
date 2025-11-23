@@ -1,0 +1,130 @@
+{
+  "info": {
+    "name": "Martial Arts API",
+    "description": "Coleção de requisições para testar a API de Lutas Marciais",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fighters",
+      "item": [
+        {
+          "name": "Get All Fighters",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/fighters",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "fighters"]
+            }
+          }
+        },
+        {
+          "name": "Get Fighter by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/fighters/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "fighters", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Fighter",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Tony Ferguson\",\n  \"nationality\": \"USA\",\n  \"age\": 40,\n  \"martialArtStyle\": \"Wing Chun\",\n  \"beltRank\": \"Black Belt\",\n  \"wins\": 25,\n  \"losses\": 8,\n  \"weightClass\": \"Lightweight\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/fighters",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "fighters"]
+            }
+          }
+        },
+        {
+          "name": "Update Fighter",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Bruce Lee\",\n  \"nationality\": \"Hong Kong\",\n  \"age\": 33,\n  \"martialArtStyle\": \"Jeet Kune Do\",\n  \"beltRank\": \"Grand Master\",\n  \"wins\": 150,\n  \"losses\": 0,\n  \"weightClass\": \"Lightweight\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/fighters/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "fighters", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Fighter",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/fighters/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "fighters", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Fighters by Martial Art Style",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/fighters/style/Muay Thai",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "fighters", "style", "Muay Thai"]
+            }
+          }
+        },
+        {
+          "name": "Get Fighters by Nationality",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/fighters/nationality/Brazil",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "fighters", "nationality", "Brazil"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
