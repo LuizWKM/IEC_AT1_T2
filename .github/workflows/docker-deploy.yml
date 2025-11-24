@@ -52,7 +52,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/api-links-uteis:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/IEC_AT1_T2:latest
 
       # Passo 4: Acionar deploy automático no Render.com via webhook
       - name: Deploy no Render
